@@ -21,28 +21,28 @@ namespace BancoThinkLab1
 
         public Credito() {
             this.Sueldo = 100000;
-            this.MontoCredito = 160000;
-            this.CantidadCuotas = 50;
+            this.MontoCredito = 100000;
+            this.CantidadCuotas = 20;
         }
 
-        public float calcularCredito()
+        public double calcularCredito()
         {
             double maximoCredito = this.Sueldo * 1.5;
             float interesMensual = 0;
+            double totalCredito = 0;
 
-            Console.WriteLine(maximoCredito);
             if( maximoCredito >= this.MontoCredito ) 
-            {
-                Console.WriteLine(this.CantidadCuotas);
+            {            
                 if( this.CantidadCuotas > 48)
                 {
-                    interesMensual = 3f / 12f;
+                    interesMensual = 3f / 12f;                    
                 } 
                 else {
                     interesMensual = 1.85f / 12f;
                 }
+                totalCredito = this.MontoCredito * interesMensual * this.CantidadCuotas;
             }
-            return interesMensual;
+            return Math.Round(totalCredito);
 
         }
 

@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace BancoThinkLab1
 {
-    internal class Program
+    internal class Credito
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("ola C Sharp");
-        }
     }
 }

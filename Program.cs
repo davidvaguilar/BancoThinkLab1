@@ -10,7 +10,9 @@ namespace BancoThinkLab1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("ola C Sharp");
+            Console.WriteLine("Programa Inicializado");
+            Credito c1 = new Credito();
+            Console.WriteLine(c1.calcularCredito());
         }
     }
 }
